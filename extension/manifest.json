@@ -13,11 +13,11 @@
     "activeTab"
   ],
   "host_permissions": [
-    "http://34.163.201.96:8080/*"
+    "localhost:8080/*"
   ],
   "content_scripts": [
     {
-      "matches": ["http://34.163.201.96:8080/*"],
+      "matches": ["localhost:8080/*"],
       "js": ["content.js"]
     }
   ],

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Sample Extension",
+  "version": "1.0",
+  "description": "A simple web extension example with SPA",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://34.163.201.96:8080/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://34.163.201.96:8080/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' https://unpkg.com; object-src 'self'"
+  }
+}
+
